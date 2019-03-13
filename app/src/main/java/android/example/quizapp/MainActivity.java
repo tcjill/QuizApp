@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    int points = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     // TextView country = (TextView) findViewById(R.id.country);
     // country.setText("");
 
-    public void reset(View view) {
+    public void submitWrite(View view) {
 
         //write in text answer Q1
-        EditText editText = findViewById(R.id.write_in);
-        editText.setText("");
+        EditText writeIn = (EditText) findViewById(R.id.write_in);
+        String name = writeIn.getText().toString();
 
 //q 2 and 3 radio buttons
         RadioGroup radioGroup = findViewById(R.id.radio_questions);
@@ -47,23 +49,29 @@ public class MainActivity extends AppCompatActivity {
 
         radioGroup = findViewById(R.id.radio_questions);
         radioGroup.clearCheck();
-
-//q 4 checkboxes a,b,c,d.
-        CheckBox checkBox = findViewById(R.id.checkbox_one);
-        checkBox.setChecked(false);
-
-        checkBox = findViewById(R.id.checkbox_two);
-        checkBox.setChecked(false);
-
-        checkBox = findViewById(R.id.checkbox_three);
-        checkBox.setChecked(false);
-
-
-        checkBox = findViewById(R.id.checkbox_four);
-        checkBox.setChecked(false);
-
-
     }
 
 
+    public void onCheckBoxClicked(View view) {
+//q 4 checkboxes a,b,c,d.
+        CheckBox marsCheckBox = (CheckBox) findViewById(R.id.checkbox_mars);
+        boolean chooseMars = marsCheckBox.isChecked();
+
+        CheckBox mercuryCheckBox = (CheckBox) findViewById(R.id.checkbox_mercury);
+        boolean chooseMercury = mercuryCheckBox.isChecked();
+
+        CheckBox earthCheckBox = (CheckBox) findViewById(R.id.checkbox_earth);
+        boolean chooseEarth = earthCheckBox.isChecked();
+
+        CheckBox venusCheckBox = (CheckBox) findViewById(R.id.checkbox_venus);
+        boolean chooseVenus = venusCheckBox.isChecked();
+
+        // if(!earthCheckBox.isChecked() && mercuryCheckBox.isChecked() && marsCheckBox.isChecked)
+        {
+            points += 1;
+
+        }
+
+
+    }
 }

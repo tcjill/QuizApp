@@ -4,157 +4,158 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp">>
+        android:layout_marginTop="0dp">
 
-        <TextView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="40dp"
-            android:text="Quiz Time"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:text="Which is the smallest planet?"
-            android:textColor="@color/colorPrimary"
-            android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="12dp"
-            android:textSize="16sp" />
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="Which is the smallest planet?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="16sp" />
 
 
-        <EditText
-            android:id="@+id/write_in"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Answer"
-            android:inputType="textCapWords" />
+            <EditText
+                android:id="@+id/write_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Answer"
+                android:inputType="textCapWords" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="12dp"
-            android:text="Is Saturn next to Earth? "
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:text="Is Saturn next to Earth? "
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
 
 
-        <RadioGroup
-            android:id="@+id/radio_questions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="12dp">
-
-            <RadioButton
-                android:id="@+id/radio_question_1"
+            <RadioGroup
+                android:id="@+id/radio_questions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
-                android:textAppearance="?android:textAppearanceMedium" />
+                android:orientation="vertical"
+                android:paddingTop="12dp">
 
-            <RadioButton
-                android:id="@+id/radio_question_2"
+                <RadioButton
+                    android:id="@+id/radio_question_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioButton
+                    android:id="@+id/radio_question_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:text="Is Faerea a planet?"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
-                android:textAppearance="?android:textAppearanceMedium" />
-        </RadioGroup>
+                android:orientation="vertical"
+                android:paddingTop="12dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="12dp" />
+                <RadioButton
+                    android:id="@+id/radio_question_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yep"
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="12dp"
-            android:text="Is Faerea a planet?"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+                    android:textAppearance="?android:textAppearanceMedium" />
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="12dp">
+                <RadioButton
+                    android:id="@+id/radio_question_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nope"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </RadioGroup>
 
-            <RadioButton
-                android:id="@+id/radio_question_3"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp"
+                android:text="Which Planets Have a Moon? "
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_mars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
-
+                android:text="Mars"
                 android:textAppearance="?android:textAppearanceMedium" />
 
-            <RadioButton
-                android:id="@+id/radio_question_4"
+            <CheckBox
+                android:id="@+id/checkbox_mercury"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
+                android:text="Mercury"
                 android:textAppearance="?android:textAppearanceMedium" />
-        </RadioGroup>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="12dp"
-            android:text="Which Planets Have a Moon? "
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+            <CheckBox
+                android:id="@+id/checkbox_earth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Earth"
+                android:textAppearance="?android:textAppearanceMedium" />
 
-        <CheckBox
-            android:id="@+id/checkbox_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mars"
-            android:textAppearance="?android:textAppearanceMedium" />
+            <CheckBox
+                android:id="@+id/checkbox_venus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venus"
+                android:textAppearance="?android:textAppearanceMedium" />
 
-        <CheckBox
-            android:id="@+id/checkbox_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mercury"
-            android:textAppearance="?android:textAppearanceMedium" />
+            <EditText
+                android:id="@+id/name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="textCapWords" />
 
-        <CheckBox
-            android:id="@+id/checkbox_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Earth"
-            android:textAppearance="?android:textAppearanceMedium" />
-
-        <CheckBox
-            android:id="@+id/checkbox_four"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Venus"
-            android:textAppearance="?android:textAppearanceMedium" />
-
-        <EditText
-            android:id="@+id/name_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint=""
-            android:inputType="textCapWords" />
-
-    </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
