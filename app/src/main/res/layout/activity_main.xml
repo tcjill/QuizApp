@@ -146,13 +146,7 @@
                 android:text="Venus"
                 android:textAppearance="?android:textAppearanceMedium" />
 
-            <EditText
-                android:id="@+id/name_field"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:hint=""
-                android:inputType="textCapWords" />
+        />
 
         </LinearLayout>
 

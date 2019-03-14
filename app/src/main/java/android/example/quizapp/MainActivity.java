@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
     }
 
     // ImageView picture = (ImageView) findViewById(R.id.profile_picture);
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         //write in text answer Q1
         EditText writeIn = (EditText) findViewById(R.id.write_in);
-        String name = writeIn.getText().toString();
+        String Mercury = writeIn.getText().toString();
+
     }
 
     public void checkResult(View view) {
