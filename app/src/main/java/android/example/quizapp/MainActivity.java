@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity {
 
         if (points <= 1) {
             Toast.makeText(this, "okay", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if (points == 2) {
             Toast.makeText(this, "better", Toast.LENGTH_SHORT).show();
-            return;
+
         }
         if (points >= 3) {
             Toast.makeText(this, "best", Toast.LENGTH_SHORT).show();
-            return;
+
         }
 
 
