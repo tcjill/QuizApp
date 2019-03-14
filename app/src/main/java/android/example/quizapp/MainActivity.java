@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("@string/incorrect");
         }
 
-//q 2 and 3 radio buttons
+//radio group all
         RadioGroup radioGroup = findViewById(R.id.radio_questions);
         radioGroup.clearCheck();
 
