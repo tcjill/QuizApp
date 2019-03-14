@@ -67,12 +67,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Yes"
+
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <RadioButton
                     android:id="@+id/radio_question_saturnno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:text="No"
                     android:textAppearance="?android:textAppearanceMedium" />
             </RadioGroup>
@@ -94,14 +96,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+
                 android:paddingTop="12dp">
 
                 <RadioButton
                     android:id="@+id/radio_question_faereayes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yep"
 
+                    android:text="Yep"
                     android:textAppearance="?android:textAppearanceMedium" />
 
                 <RadioButton
@@ -109,6 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/nope"
+
                     android:textAppearance="?android:textAppearanceMedium" />
             </RadioGroup>
 
