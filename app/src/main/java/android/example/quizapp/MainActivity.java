@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
         // quantity = quantity + 1;
         // displayQuantity(quantity);
         }
-
         if (points ==2){
         Toast.makeText(this, "okayy", Toast.LENGTH_SHORT).show();
         // Exit this method early because there's nothing left to do
@@ -120,10 +119,7 @@ public class MainActivity extends AppCompatActivity {
             }
             /points = points + 1;
             // displayQuantity(quantity);
-
-
     }
-
 */
 
     }
