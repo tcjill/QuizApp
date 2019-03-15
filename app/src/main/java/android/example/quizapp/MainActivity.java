@@ -24,21 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
     }
-
-    // ImageView picture = (ImageView) findViewById(R.id.profile_picture);
-    // picture.setImageResource(R.drawable.googl);
-
-    //TextView name = (TextView) findViewById(R.id.name);
-    //name.setText("");
-
-
-    //TextView birthday = (TextView) findViewById(R.id.birthday);
-    //birthday.setText("");
-
-    // TextView country = (TextView) findViewById(R.id.country);
-    // country.setText("");
 
     public void writeIn(View view) {
 
@@ -53,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
         rb = (RadioButton) findViewById(R.id.radio_question_saturnyes);
 
         if (rb.isChecked()) {
-            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("@string/correct");
+            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("correct");
         } else {
-            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("@string/incorrect");
+            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("incorrect");
         }
 
 //radio group all
@@ -96,31 +82,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        /*if (points <=1){
-        Toast.makeText(this, "yuck", Toast.LENGTH_SHORT).show();
-        // Exit this method early because there's nothing left to do
-        //   return;
-        // }
-        // quantity = quantity + 1;
-        // displayQuantity(quantity);
-        }
-        if (points ==2){
-        Toast.makeText(this, "okayy", Toast.LENGTH_SHORT).show();
-        // Exit this method early because there's nothing left to do
-        //   return;
-        // }
-        // quantity = quantity + 1;
-        // displayQuantity(quantity);
-        }
-        if (points ==3){
-            Toast.makeText(this, "great", Toast.LENGTH_SHORT).show();
-            // Exit this method early because there's nothing left to do
-            return;
-            }
-            /points = points + 1;
-            // displayQuantity(quantity);
-    }
-*/
 
     }
 }
