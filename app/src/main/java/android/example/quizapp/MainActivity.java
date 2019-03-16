@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     //text
-    writeIn=(EditText)
+    writeIn=(EditText);
 
     findViewById(R.id.writein);
 
@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
     findViewById(R.id.question_one_answer_one);
 
-    questionOneAnswerTwo=(RadioButton)
+    questionOneAnswerTwo=(RadioButton);
 
     findViewById(R.id.question_one_answer_two);
 
 
     // Q2
-    questionTwoAnswerOne=(RadioButton)
+    questionTwoAnswerOne=(RadioButton);
 
     findViewById(R.id.question_two_answer_one);
 
