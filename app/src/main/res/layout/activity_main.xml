@@ -21,13 +21,6 @@
             android:textColor="#212121"
             android:textSize="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="12dp"
-            android:textSize="16sp" />
 
 
         <EditText
@@ -42,20 +35,19 @@
             android:layout_height="wrap_content"
             android:paddingTop="20dp"
             android:paddingBottom="12dp"
-            android:text="Saturn"
+            android:text="Does Saturn have rings"
             android:textColor="#212121"
             android:textSize="20sp" />
 
-
         <RadioGroup
-            android:id="@+id/radio_questions"
+            android:id="@+id/radio_question_one_answers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="12dp">
 
             <RadioButton
-                android:id="@+id/radio_question_saturnyes"
+                android:id="@+id/question_one_answer_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="yes"
@@ -63,10 +55,9 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <RadioButton
-                android:id="@+id/radio_question_saturnno"
+                android:id="@+id/question_one_answer_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:text="no"
                 android:textAppearance="?android:textAppearanceMedium" />
         </RadioGroup>
@@ -83,17 +74,18 @@
             android:text="Is Faerea a planet?"
             android:textColor="#212121"
             android:textSize="20sp" />
-
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/radio_question_two_answers"
             android:orientation="vertical"
+
 
 
             android:paddingTop="12dp">
 
             <RadioButton
-                android:id="@+id/radio_question_faereayes"
+                android:id="@+id/question_two_answer_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -101,13 +93,14 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <RadioButton
-                android:id="@+id/radio_question_faereano"
+                android:id="@+id/question_two_answer_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nope"
 
                 android:textAppearance="?android:textAppearanceMedium" />
         </RadioGroup>
+
 
         <TextView
             android:layout_width="match_parent"
@@ -118,29 +111,30 @@
             android:textColor="#212121"
             android:textSize="20sp" />
 
+
         <CheckBox
-            android:id="@+id/checkbox_mars"
+            android:id="@+id/question_4_answer_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mars"
             android:textAppearance="?android:textAppearanceMedium" />
 
         <CheckBox
-            android:id="@+id/checkbox_mercury"
+            android:id="@+id/question_4_answer_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mercury"
             android:textAppearance="?android:textAppearanceMedium" />
 
         <CheckBox
-            android:id="@+id/checkbox_earth"
+            android:id="@+id/question_4_answer_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Earth"
             android:textAppearance="?android:textAppearanceMedium" />
 
         <CheckBox
-            android:id="@+id/checkbox_venus"
+            android:id="@+id/question_4_answer_four"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Venus"

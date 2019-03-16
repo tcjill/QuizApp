@@ -1,6 +1,7 @@
 
 package android.example.quizapp;
 
+import android.app.Notification;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    String[] correctAnswers = {"No", "0", "1", "SpaceTest"};
     int points = 0;
+    TextView writein;
+    RadioGroup questionOneAnswers;
+    RadioButton questionOneAnswerOne;
+    RadioButton questionOneAnswerTwo;
+    RadioGroup questionTWoAnswers;
+    RadioButton questionTwoAnswerOne;
+    RadioButton questionTwoAnswerTwo;
+
+    CheckBox questionFourAnswerOne;
+    CheckBox questionFourAnswerTwo;
+    CheckBox questionFourAnswerThree;
+    CheckBox questionFourAnswerFour;
 
 
     @Override
@@ -24,64 +38,156 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    }
-
-    public void writeIn(View view) {
-
-        //write in text answer Q1
-        EditText writeIn = (EditText) findViewById(R.id.write_in);
-        String Mercury = writeIn.getText().toString();
 
     }
+    //text
+    writeIn=(EditText)
 
-    public void checkResult(View view) {
-        RadioButton rb;
-        rb = (RadioButton) findViewById(R.id.radio_question_saturnyes);
+    findViewById(R.id.writein);
 
-        if (rb.isChecked()) {
-            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("correct");
+    //q1
+    questionOneAnswerOne=(RadioButton)
+
+    findViewById(R.id.question_one_answer_one);
+
+    questionOneAnswerTwo=(RadioButton)
+
+    findViewById(R.id.question_one_answer_two);
+
+
+    // Q2
+    questionTwoAnswerOne=(RadioButton)
+
+    findViewById(R.id.question_two_answer_one);
+
+    questionTwoAnswerTwo=(RadioButton)
+
+    findViewById(R.id.question_two_answer_two);
+
+
+    // q4
+    questionFourAnswerOne =(CheckBox)
+
+    findViewById(R.id.question_four_answer_two);
+
+    questionFourAnswerTwo =(CheckBox)
+
+    findViewById(R.id.question_four_answer_two);
+
+    questionFourAnswerThree =(CheckBox)
+
+    findViewById(R.id.question_four_answer_three);
+
+    questionFourAnswerFour =(CheckBox)
+
+    findViewById(R.id.question_four_answer_four):
+
+    @Override
+    public <T extends View> T findViewById(int id) {
+        return super.findViewById(id);
+    }
+
+
+}
+
+    private boolean isEmpty(EditText writeIn) {
+        Notification.MessagingStyle.Message Mercury;
+        Notification.MessagingStyle.Message mercury = null;
+        return mercury.getText();
+        getText;
+        (getText).toString().trim().length() == 0;
+    }
+
+
+    private String questionOneGetAnswer() {
+        if (questionOneAnswerOne.isChecked()) {
+            return questionOneAnswerOne.getText().toString();
+        } else if (questionOneAnswerTwo.isChecked()) {
+            return questionOneAnswerTwo.getText().toString();
         } else {
-            ((TextView) findViewById(R.id.radio_question_saturnyes)).setText("incorrect");
+            return "";
         }
-
-//radio group all
-        RadioGroup radioGroup = findViewById(R.id.radio_questions);
-        radioGroup.clearCheck();
-
-        radioGroup = findViewById(R.id.radio_questions);
-        radioGroup.clearCheck();
     }
 
-//checkboxes
-
-    public void onCheckBoxClicked(View view) {
-
-        CheckBox marsCheckBox = (CheckBox) findViewById(R.id.checkbox_mars);
-        boolean chooseMars = marsCheckBox.isChecked();
-
-        CheckBox mercuryCheckBox = (CheckBox) findViewById(R.id.checkbox_mercury);
-        boolean chooseMercury = mercuryCheckBox.isChecked();
-
-        CheckBox earthCheckBox = (CheckBox) findViewById(R.id.checkbox_earth);
-        boolean chooseEarth = earthCheckBox.isChecked();
-
-        CheckBox venusCheckBox = (CheckBox) findViewById(R.id.checkbox_venus);
-        boolean chooseVenus = venusCheckBox.isChecked();
-
-        if (points <= 1) {
-            Toast.makeText(this, "okay", Toast.LENGTH_SHORT).show();
-
+    private String questionTwoGetAnswer() {
+        if (!isEmpty(questionTwoAnswer)) {
+            return questionTwoAnswer.getText().toString();
+        } else {
+            return "";
         }
-        if (points == 2) {
-            Toast.makeText(this, "better", Toast.LENGTH_SHORT).show();
+    }
 
+    private String questionThreeGetAnswer() {
+        if (!isEmpty(questionThreeAnswer)) {
+            return questionThreeAnswer.getText().toString();
+        } else {
+            return "";
         }
-        if (points >= 3) {
-            Toast.makeText(this, "best", Toast.LENGTH_SHORT).show();
+    }
 
+    private String questionFourGetAnswer() {
+        String returnString = "";
+
+        if (questionFourAnswerOne.isChecked()) {
+            returnString += questionFourAnswerOne.getText();
         }
 
+        if (questionFourAnswerTwo.isChecked()) {
+            returnString += " " + questionFourAnswerTwo.getText();
+        }
+
+        if (questionFourAnswerThree.isChecked()) {
+            returnString += " " + questionFourAnswerThree.getText();
+        }
+
+        return returnString;
+    }
+
+    public void checkAnswers(View view) {
+        String[] givenAnswers = {questionOneGetAnswer(), questionTwoGetAnswer(), questionThreeGetAnswer(), questionFourGetAnswer()};
+
+        int right = 0;
+        int wrong = 0;
+
+        for (int i = 0; i < givenAnswers.length; i++) {
+            if (givenAnswers[i].equals(points[i])) {
+                right++;
+            } else {
+                wrong++;
+            }
+        }
+
+        String message;
+
+        if (wrong == 0) {
+            message = "Very Well Done!";
+        } else {
+            message = "This many " + right + "\nThis many  " + wrong + "\nStart over";
+        }
+
+        //Reset answer fields
+        //text
+        writein.setText("");
 
 
+        // QUESTION 1 2
+
+        questionOneAnswers.clearCheck();
+        questionTwoAnswers.clearCheck();
+
+
+        // QUESTION 4
+        questionFourAnswerOne.setChecked(false);
+        questionFourAnswerTwo.setChecked(false);
+        questionFourAnswerThree.setChecked(false);
+        questionFourAnswerFour.setChecked(false);
+
+        // Print out message with quiz results
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
+
+
+
+
+
