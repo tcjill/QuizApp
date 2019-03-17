@@ -48,10 +48,11 @@ public class MainActivity extends AppCompatActivity {
         }
         if (Earth.isChecked()) {
             points++;
-            if (Mercury.isChecked()) {
-                points++;
-            }
         }
+        if (Mercury.isChecked()) {
+            points++;
+            }
+
         // This gets the  entered in Question 4
         EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
         String jupiter = jupiterArea.getText().toString();
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             points++;
         }
         // Shows score
-        Toast.makeText(this, "You Got : " + points + " out of 10", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You Got : " + points + " out of 7", Toast.LENGTH_LONG).show();
     }
 }
 
