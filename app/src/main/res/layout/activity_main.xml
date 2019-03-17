@@ -1,8 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -21,10 +22,10 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="16dp"
             android:orientation="horizontal">
 
             <RadioButton
@@ -46,29 +47,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
             android:text="2. What is our smallest planet"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <EditText
             android:id="@+id/mercury_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="120dp"
+            android:layout_marginBottom="16dp"
 
             android:hint="answer"
             android:inputType="textCapWords"
             android:padding="6dp"
             android:textColor="#000000"
             android:textSize="18sp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="2dp"
             android:text="3. Which 3 have a moon?"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -77,8 +80,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
             android:text="Mars"
             android:textColor="#000000"
             android:textSize="18sp" />
@@ -121,9 +124,9 @@
             android:id="@+id/jupiter_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
 
             android:hint="answer"
             android:inputType="textCapWords"
@@ -142,10 +145,10 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
             android:layout_marginTop="2dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="16dp"
             android:padding="4dp"
             android:textColor="#000000">
 
@@ -161,6 +164,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nooooo" />
         </RadioGroup>
+
         <Button
             android:id="@+id/submit_answer_button"
             android:layout_width="wrap_content"
