@@ -40,13 +40,17 @@ public class MainActivity extends AppCompatActivity {
             points++;
         }
         // This gets the answers for Question 3
-        CheckBox checkBoxQuestion3Answer2 = (CheckBox) findViewById(R.id.question3_answer2_true);
-        CheckBox checkBoxQuestion3Answer4 = (CheckBox) findViewById(R.id.question3_answer4_true);
-        if (checkBoxQuestion3Answer2.isChecked()) {
+        CheckBox Mars = (CheckBox) findViewById(R.id.Mars);
+        CheckBox Mercury = (CheckBox) findViewById(R.id.Mercury);
+        CheckBox Earth = (CheckBox) findViewById(R.id.Earth);
+        if (Mars.isChecked()) {
             points++;
         }
-        if (checkBoxQuestion3Answer4.isChecked()) {
+        if (Earth.isChecked()) {
             points++;
+            if (Mercury.isChecked()) {
+                points++;
+            }
         }
         // This gets the  entered in Question 4
         EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
@@ -56,12 +60,12 @@ public class MainActivity extends AppCompatActivity {
             points++;
         }
         // This gets the answer for Question 5
-        RadioButton Flat_y = (RadioButton) findViewById(R.id.Flat_y);
-        if (Flat_y.isChecked()) {
+        RadioButton Flat_n = (RadioButton) findViewById(R.id.Flat_n);
+        if (Flat_n.isChecked()) {
             points++;
         }
         // Shows score
-        Toast.makeText(this, "Your score is: " + points + " out of 6", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You Got : " + points + " out of 10", Toast.LENGTH_LONG).show();
     }
 }
 
