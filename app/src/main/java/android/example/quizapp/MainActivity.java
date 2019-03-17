@@ -1,4 +1,3 @@
-
 package android.example.quizapp;
 
 import android.app.Notification;
@@ -17,173 +16,52 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    String[] correctAnswers = {"No", "0", "1", "SpaceTest"};
-    int points = 0;
-    TextView writein;
-    RadioGroup questionOneAnswers;
-    RadioButton questionOneAnswerOne;
-    RadioButton questionOneAnswerTwo;
-    RadioGroup questionTWoAnswers;
-    RadioButton questionTwoAnswerOne;
-    RadioButton questionTwoAnswerTwo;
-
-    CheckBox questionFourAnswerOne;
-    CheckBox questionFourAnswerTwo;
-    CheckBox questionFourAnswerThree;
-    CheckBox questionFourAnswerFour;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-    }
-    //text
-    writeIn=(EditText);
-
-    findViewById(R.id.writein);
-
-    //q1
-    questionOneAnswerOne=(RadioButton)
-
-    findViewById(R.id.question_one_answer_one);
-
-    questionOneAnswerTwo=(RadioButton);
-
-    findViewById(R.id.question_one_answer_two);
-
-
-    // Q2
-    questionTwoAnswerOne=(RadioButton);
-
-    findViewById(R.id.question_two_answer_one);
-
-    questionTwoAnswerTwo=(RadioButton)
-
-    findViewById(R.id.question_two_answer_two);
-
-
-    // q4
-    questionFourAnswerOne =(CheckBox)
-
-    findViewById(R.id.question_four_answer_two);
-
-    questionFourAnswerTwo =(CheckBox)
-
-    findViewById(R.id.question_four_answer_two);
-
-    questionFourAnswerThree =(CheckBox)
-
-    findViewById(R.id.question_four_answer_three);
-
-    questionFourAnswerFour =(CheckBox)
-
-    findViewById(R.id.question_four_answer_four):
-
-    @Override
-    public <T extends View> T findViewById(int id) {
-        return super.findViewById(id);
     }
 
-
-}
-
-    private boolean isEmpty(EditText writeIn) {
-        Notification.MessagingStyle.Message Mercury;
-        Notification.MessagingStyle.Message mercury = null;
-        return mercury.getText();
-        getText;
-        (getText).toString().trim().length() == 0;
-    }
-
-
-    private String questionOneGetAnswer() {
-        if (questionOneAnswerOne.isChecked()) {
-            return questionOneAnswerOne.getText().toString();
-        } else if (questionOneAnswerTwo.isChecked()) {
-            return questionOneAnswerTwo.getText().toString();
-        } else {
-            return "";
+    /**
+     * This method works when the submit answer button is pressed.
+     */
+    public void submitAnswers(View view) {
+        int points = 0;
+        // This gets the answer for Question 1
+        RadioButton radioButtonSaturnYes = (RadioButton) findViewById(R.id.saturn_yes);
+        if (radioButtonSaturnYes.isChecked()) {
+            points++;
         }
-    }
-
-    private String questionTwoGetAnswer() {
-        if (!isEmpty(questionTwoAnswer)) {
-            return questionTwoAnswer.getText().toString();
-        } else {
-            return "";
+        // This gets the material entered in Question 2
+        EditText mercuryArea = (EditText) findViewById(R.id.mercury_answer);
+        String mercury = mercuryArea.getText().toString();
+        boolean mercuryAnswer = "Mercury".equals(mercury);
+        if (mercuryAnswer) {
+            points++;
         }
-    }
-
-    private String questionThreeGetAnswer() {
-        if (!isEmpty(questionThreeAnswer)) {
-            return questionThreeAnswer.getText().toString();
-        } else {
-            return "";
+        // This gets the answers for Question 3
+        CheckBox checkBoxQuestion3Answer2 = (CheckBox) findViewById(R.id.question3_answer2_true);
+        CheckBox checkBoxQuestion3Answer4 = (CheckBox) findViewById(R.id.question3_answer4_true);
+        if (checkBoxQuestion3Answer2.isChecked()) {
+            points++;
         }
-    }
-
-    private String questionFourGetAnswer() {
-        String returnString = "";
-
-        if (questionFourAnswerOne.isChecked()) {
-            returnString += questionFourAnswerOne.getText();
+        if (checkBoxQuestion3Answer4.isChecked()) {
+            points++;
         }
-
-        if (questionFourAnswerTwo.isChecked()) {
-            returnString += " " + questionFourAnswerTwo.getText();
+        // This gets the  entered in Question 4
+        EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
+        String jupiter = jupiterArea.getText().toString();
+        boolean jupiterAnswer = "Jupiter".equals(jupiter);
+        if (jupiterAnswer) {
+            points++;
         }
-
-        if (questionFourAnswerThree.isChecked()) {
-            returnString += " " + questionFourAnswerThree.getText();
+        // This gets the answer for Question 5
+        RadioButton Flat_y = (RadioButton) findViewById(R.id.Flat_y);
+        if (Flat_y.isChecked()) {
+            points++;
         }
-
-        return returnString;
-    }
-
-    public void checkAnswers(View view) {
-        String[] givenAnswers = {questionOneGetAnswer(), questionTwoGetAnswer(), questionThreeGetAnswer(), questionFourGetAnswer()};
-
-        int right = 0;
-        int wrong = 0;
-
-        for (int i = 0; i < givenAnswers.length; i++) {
-            if (givenAnswers[i].equals(points[i])) {
-                right++;
-            } else {
-                wrong++;
-            }
-        }
-
-        String message;
-
-        if (wrong == 0) {
-            message = "Very Well Done!";
-        } else {
-            message = "This many " + right + "\nThis many  " + wrong + "\nStart over";
-        }
-
-        //Reset answer fields
-        //text
-        writein.setText("");
-
-
-        // QUESTION 1 2
-
-        questionOneAnswers.clearCheck();
-        questionTwoAnswers.clearCheck();
-
-
-        // QUESTION 4
-        questionFourAnswerOne.setChecked(false);
-        questionFourAnswerTwo.setChecked(false);
-        questionFourAnswerThree.setChecked(false);
-        questionFourAnswerFour.setChecked(false);
-
-        // Print out message with quiz results
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        // Shows score
+        Toast.makeText(this, "Your score is: " + points + " out of 6", Toast.LENGTH_LONG).show();
     }
 }
 
