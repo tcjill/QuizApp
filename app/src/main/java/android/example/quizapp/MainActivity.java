@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox Mars = (CheckBox) findViewById(R.id.Mars);
         CheckBox Mercury = (CheckBox) findViewById(R.id.Mercury);
         CheckBox Earth = (CheckBox) findViewById(R.id.Earth);
+        CheckBox Venus = (CheckBox) findViewById(R.id.Venus);
+
         if (Mars.isChecked()) {
             points++;
         }
@@ -52,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         if (Mercury.isChecked()) {
             points++;
             }
+        if (Venus.isChecked()) {
+            points--;
+        }
 
         // This gets the  entered in Question 4
         EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
