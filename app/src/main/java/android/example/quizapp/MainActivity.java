@@ -45,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
         CheckBox Earth = (CheckBox) findViewById(R.id.Earth);
         CheckBox Venus = (CheckBox) findViewById(R.id.Venus);
 
+
+        if (Mars.isChecked() && Mercury.isChecked() && Earth.isChecked() && !Venus.isChecked()) {
+            points += 1;
+
+        }
+
         if (Mars.isChecked()) {
             points++;
         }
@@ -73,9 +79,6 @@ public class MainActivity extends AppCompatActivity {
         // Shows score
         Toast.makeText(this, "You Got : " + points + " out of 7", Toast.LENGTH_LONG).show();
     }
+
+
 }
-
-
-
-
-
