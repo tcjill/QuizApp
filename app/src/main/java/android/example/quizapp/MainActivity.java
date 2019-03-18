@@ -51,18 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if (Mars.isChecked()) {
-            points++;
-        }
-        if (Earth.isChecked()) {
-            points++;
-        }
-        if (Mercury.isChecked()) {
-            points++;
-            }
-        if (Venus.isChecked()) {
-            points--;
-        }
 
         // This gets the  entered in Question 4
         EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
