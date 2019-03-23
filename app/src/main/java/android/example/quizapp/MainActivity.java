@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
             points += 1;
 
         }
-
-
         // This gets the  entered in Question 4
         EditText jupiterArea = (EditText) findViewById(R.id.jupiter_answer);
         String jupiter = jupiterArea.getText().toString();
